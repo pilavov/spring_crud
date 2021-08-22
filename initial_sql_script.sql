@@ -8,7 +8,7 @@ create table users_table
 		constraint users_table_pk
 			primary key,
 	name varchar(50),
-	login varchar(50),
+	login varchar(60),
 	email varchar(40)
 );
 
