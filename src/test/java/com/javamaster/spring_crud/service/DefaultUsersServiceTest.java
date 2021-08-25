@@ -50,11 +50,11 @@ class DefaultUsersServiceTest {
     }
 
     @Test
-    void findByLogin() {
-        when(usersRepository.findByLogin(eq("test_login"))).thenReturn(aUser());
-        UsersDto foundUser = usersService.findByLogin("test_login");
+    void findByName() {
+        when(usersRepository.findByName(eq("test_login"))).thenReturn(aUser());
+        UsersDto foundUser = usersService.findByName("test_name");
         assertThat(foundUser).isNotNull();
-        assertThat(foundUser.getLogin()).isEqualTo("test_login");
+        assertThat(foundUser.getLogin()).isEqualTo("test_name");
     }
 
     @Test

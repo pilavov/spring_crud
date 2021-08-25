@@ -31,10 +31,10 @@ public class UsersController {
         return usersService.findAll();
     }
 
-    @GetMapping("/findByLogin")
-    public UsersDto findByLogin(@RequestParam String login) {
-        log.info("Handling find by login request: " + login);
-        return usersService.findByLogin(login);
+    @GetMapping("/findByName")
+    public UsersDto findByLogin(@RequestParam String name) {
+        log.info("Handling find by name request: " + name);
+        return usersService.findByName(name);
     }
 
     @DeleteMapping("/delete/{id}")
