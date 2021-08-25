@@ -35,10 +35,10 @@
 </form>
 
 <input id="search_field">
-<button onclick="searchByLogin()">Search by Login</button>
+<button onclick="searchByName()">Search by User name</button>
 <script>
-    function searchByLogin() {
-        var login = document.getElementById("search_field").value;
+    function searchByName() {
+        var name = document.getElementById("search_field").value;
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
@@ -46,19 +46,19 @@
                 var html = '<tr>\n' +
                     '        <th>User id</th>\n' +
                     '        <th>User name</th>\n' +
-                    '        <th>User login</th>\n' +
+                    '        <th>User name</th>\n' +
                     '        <th>User email</th>\n' +
                     '        <th>Delete</th>\n' +
                     '    </tr>';
                 html = html + '<tr><td>' + user.id + '</td>\n' +
                     '        <td>' + user.name + '</td>\n' +
-                    '        <td>' + user.login + '</td>\n' +
+                    '        <td>' + user.name + '</td>\n' +
                     '        <td>' + user.email + '</td>' +
                     '        <td><button onclick="deleteUser(' + user.id + ')">Delete</button></td></tr>';
                 document.getElementById("usersList").innerHTML = html;
             }
         };
-        xhttp.open("GET", "https://spring-boot-1111.herokuapp.com/users/findByLogin?login=" + login, true);
+        xhttp.open("GET", "https://spring-boot-1111.herokuapp.com/users/findByname?name=" + name, true);
         xhttp.send();
     }
 
