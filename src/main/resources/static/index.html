@@ -46,13 +46,13 @@
                 var html = '<tr>\n' +
                     '        <th>User id</th>\n' +
                     '        <th>User name</th>\n' +
-                    '        <th>User name</th>\n' +
+                    '        <th>User login</th>\n' +
                     '        <th>User email</th>\n' +
                     '        <th>Delete</th>\n' +
                     '    </tr>';
                 html = html + '<tr><td>' + user.id + '</td>\n' +
                     '        <td>' + user.name + '</td>\n' +
-                    '        <td>' + user.name + '</td>\n' +
+                    '        <td>' + user.login + '</td>\n' +
                     '        <td>' + user.email + '</td>' +
                     '        <td><button onclick="deleteUser(' + user.id + ')">Delete</button></td></tr>';
                 document.getElementById("usersList").innerHTML = html;
