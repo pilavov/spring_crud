@@ -57,7 +57,7 @@
                     '    </tr>';
                 html = html + '<tr><td>' + user.id + '</td>\n' +
                     '        <td>' + user.name + '</td>\n' +
-                    '        <td>' + user.login + '</td>\n' +
+                    '        <td>' + '******' + '</td>\n' +
                     '        <td>' + user.email + '</td>' +
                     '        <td><button onclick="deleteUser(' + user.id + ')">Delete</button></td></tr>';
                 document.getElementById("usersList").innerHTML = html;
@@ -120,6 +120,7 @@
 
 <button onclick="loadUsers()">Show all users</button>
 <script>
+    document.write("<br>");
     loadUsers();
 </script>
 </body>
