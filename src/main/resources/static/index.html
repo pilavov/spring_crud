@@ -45,6 +45,7 @@
                 try{
                 var user = JSON.parse(this.responseText);
                 } catch(err){
+                alert("No user found!");
                 console.log(err);
                 }
                 var html = '<tr>\n' +
