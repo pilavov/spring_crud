@@ -42,7 +42,11 @@
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
+                try{
                 var user = JSON.parse(this.responseText);
+                } catch(err){
+                console.log(err);
+                }
                 var html = '<tr>\n' +
                     '        <th>User id</th>\n' +
                     '        <th>User name</th>\n' +
