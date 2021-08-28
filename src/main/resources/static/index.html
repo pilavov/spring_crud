@@ -71,6 +71,7 @@
         var xhttp = new XMLHttpRequest();
         xhttp.open("DELETE", "https://spring-boot-1111.herokuapp.com/users/delete/" + userId, true);
         xhttp.send();
+        loadUsers();
     }
 
     function createUser() {
